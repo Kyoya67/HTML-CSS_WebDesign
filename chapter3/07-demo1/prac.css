@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-menu a {
+    background-color: #0bd;
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+    display: inline-block;
+}
+
+.main-menu a:hover {
+    background-color: #0090aa;
+}
+
+.has-menu {
+    position: relative;
+}
+
+.has-menu>a::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f078";
+    margin-left: .5rem;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 4.5rem;
+    left: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.sub-menu a {
+    margin: 1px;
+    width: 180px;
+    background-color: #666;
+}
+
+.has-menu:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}

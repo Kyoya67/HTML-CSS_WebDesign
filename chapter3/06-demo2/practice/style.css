@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    padding-top: 2rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.prev,
+.next {
+    display: inline-block;
+    background: #0bd;
+    color: #fff;
+    margin: 0 1px;
+}
+
+.prev:hover,
+.next:hover {
+    background: #0090aa;
+}
+
+.prev {
+    border-radius: 2rem 0 0 2rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.next {
+    border-radius: 0 2rem 2rem 0;
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+.prev::before,
+.next::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.prev::before {
+    content: "\f060";
+    margin: 0 1rem 0 0;
+}
+
+.next::after {
+    content: "\f061";
+    margin: 0 0 0 1rem;
+}
+
+.green-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.green-box a {
+    font-family: "Font Awesome 6 Free";
+    background: rgb(43, 206, 144);
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 30px;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+.green-box a:last-child {
+    position: relative;
+}
+
+.green-box a:hover {
+    background: rgb(91, 150, 128);
+}
+
+.green-box a:last-child::before {
+    content: "\f105";
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+}
+
+.green-box::after {
+    content: "";
+    width: 20px;
+    height: 50px;
+    /* width: calc(tan(60deg) / 2 * 50px); */
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background-color: rgb(43, 206, 144);
+}
+
+.green-box:hover::after {
+    background: rgb(91, 150, 128);
+}

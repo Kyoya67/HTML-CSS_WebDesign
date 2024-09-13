@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius: 100%の効果</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+        }
+        .rounded {
+            border-radius: 50%/30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>border-radius: 100%の効果</h1>
+    
+    <div class="container">
+        <div>
+            <div class="box">
+                通常の四角形
+            </div>
+            <p>border-radius: 0</p>
+        </div>
+        
+        <div>
+            <div class="box rounded">
+                border-radius: 100%
+            </div>
+            <p>長方形に適用</p>
+        </div>
+        
+        <div>
+            <div class="box circle">
+                正方形
+            </div>
+            <p>border-radius: 0</p>
+        </div>
+        
+        <div>
+            <div class="box circle rounded">
+                完全な円
+            </div>
+            <p>border-radius: 100%</p>
+        </div>
+    </div>
+    
+    <h2>解説</h2>
+    <ul>
+        <li>長方形の要素に適用すると、非常に丸みを帯びた形状になりますが、完全な楕円にはなりません。</li>
+        <li>正方形の要素に適用すると、完全な円になります。</li>
+        <li>100%は要素の幅と高さに対する相対値として解釈されます。</li>
+        <li>長方形の場合、短辺の半分の長さが最大の丸みの半径となります。</li>
+    </ul>
+    
+    <h2>使用例</h2>
+    <ul>
+        <li>プロフィール画像やアバターの表示</li>
+        <li>丸いボタンやアイコンの作成</li>
+        <li>デザイン要素としての円形や楕円形のシェイプ</li>
+        <li>レスポンシブデザインでの一貫した丸みの表現</li>
+    </ul>
+</body>
+</html>

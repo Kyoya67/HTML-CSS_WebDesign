@@ -1,0 +1,22 @@
+body {
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+img {
+    width: 400px;
+}
+
+img:hover {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    from {
+        opacity: .2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

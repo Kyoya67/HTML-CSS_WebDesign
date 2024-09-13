@@ -1,0 +1,19 @@
+:root {
+    --bg: pink;
+}
+
+@media (min-width: 600px) {
+    :root {
+        --bg: orange;
+    }
+}
+
+body {
+    background: var(--bg);
+    transition: background .4s;
+}
+
+p {
+    padding: 3rem;
+    line-height: 1.6;
+}
